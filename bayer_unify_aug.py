@@ -17,8 +17,8 @@ def bayer_unify(raw: np.ndarray, input_pattern: str, target_pattern: str, mode: 
     target_pattern : {"RGGB", "BGGR", "GRBG", "GBRG"}
         The expected output pattern.
     mode: {"crop", "pad"}
-        The way to handle submosaic shift. "crop" abandon the outmost pixels,
-        and "pad" introduce extra pixels. Use "crop" in training and "pad" in
+        The way to handle submosaic shift. "crop" abandons the outmost pixels,
+        and "pad" introduces extra pixels. Use "crop" in training and "pad" in
         testing.
     """
     if input_pattern not in BAYER_PATTERNS:
@@ -28,7 +28,7 @@ def bayer_unify(raw: np.ndarray, input_pattern: str, target_pattern: str, mode: 
     if mode not in NORMALIZATION_MODE:
         raise ValueError('Unknown normalization mode!')
     if not isinstance(raw, np.ndarray) or len(raw.shape) != 2:
-        raise ValueError('raw should be a 2-dimensional numpy.ndarray')
+        raise ValueError('raw should be a 2-dimensional numpy.ndarray!')
 
     if input_pattern == target_pattern:
         h_offset, w_offset = 0, 0
