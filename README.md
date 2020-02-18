@@ -3,11 +3,13 @@ Python toolbox for Bayer Raw image unification and augmentation.
 This repo implements the data pre-processing part of our NTIRE 2019 Real Image Denoising Challenge submission.
 For more details, see our paper [Learning Raw Image Denoising With Bayer Pattern Unification and Bayer Preserving Augmentation](http://openaccess.thecvf.com/content_CVPRW_2019/html/NTIRE/Liu_Learning_Raw_Image_Denoising_With_Bayer_Pattern_Unification_and_Bayer_CVPRW_2019_paper.html)
 
-
 ## Dependency
 Python3, Numpy
 
 Note: For Python 2, change the function signatures to Python 2 style.
+
+## How to Install
+Copy `bayer_unify_aug.py` and you are good to go.
 
 ## Demo
 ```python
